@@ -76,9 +76,14 @@ function notify(notification) {
     el.innerHTML = "";
     console.log(array)
     if(array[0] != "") {
-        var length = Math.min(array.length, 5);
-        for(i = 1; i < length + 1; i++) {
-            el.innerHTML += array[i-1] + "<br>";
+        var length = Math.min(array.length);
+        // als je hier "length - 4" vervangt met 0 krijg je een box
+        // waarin je kut scrollen. Heb wat ccs gemaakt hiervoor.
+        // zie maar wat je leuk vind.
+        for(i = length - 4; i < length; i++) {
+            if(array[i] != null) {
+                el.innerHTML += array[i] + "<br>";
+            }
         }
     }
     el.innerHTML += (time +" sec: "+ notification);
