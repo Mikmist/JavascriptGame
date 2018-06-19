@@ -17,12 +17,20 @@ window.setInterval(function(){
     lowFoodWarning();
 }, 1000)
 
+
+//function time(timeDisplay){
+//    if timeDisplay < 60 {
+//
+//    }
+//
+//}
+
 function round(input){
     return Math.round(input * 100) / 100;
 }
 
 function lowFoodWarning(){
-    if (foodNumber < 10){
+    if (foodNumber < 9){
         notify("Your food is low");
     }
 }
@@ -73,5 +81,5 @@ function notify(notification) {
             el.innerHTML += array[i-1] + "<br>";
         }
     }
-    el.innerHTML += notification;
+    el.innerHTML += (time +" sec: "+ notification);
 }
