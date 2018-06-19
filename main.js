@@ -56,7 +56,7 @@ function woodButton(){
         food = false;
     }
 }
-notify("hallo")
+
 /*
  * This function displays notifications with a max of 5.
  */
@@ -67,8 +67,14 @@ function notify(notification) {
 
     el.innerHTML = "";
 
-    var length = Math.min(5, array.length);
-    for(i = 1; i < length; i++) {
+    var length;
+    if(array.length < 5) {
+        length = array.length;
+        i = 0;
+    } else {
+        i = 1;
+    }
+    for(; i < length; i++) {
         el.innerHTML += array[i] + "<br>";
     }
 
