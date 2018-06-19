@@ -4,20 +4,28 @@ var population =1
 var food = false;
 var wood = false;
 var array = []
+var time = 0;
 
 window.setInterval(function(){
+    document.getElementById('time').innerHTML = "Time: " + round(++time);
     console.log(food);
     console.log(wood);
     woodFunction();
     foodFunction();
     document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
     document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
+    lowFoodWarning();
 }, 1000)
 
 function round(input){
     return Math.round(input * 100) / 100;
 }
 
+function lowFoodWarning(){
+    if (foodNumber < 7){
+        notify("Your food is low");
+    }
+}
 function foodFunction(){
     foodNumber -= 0.2*population;
     if (food){
@@ -48,7 +56,7 @@ function woodButton(){
         food = false;
     }
 }
-
+notify("hallo")
 /*
  * This function displays notifications with a max of 5.
  */
