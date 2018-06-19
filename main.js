@@ -22,7 +22,7 @@ function round(input){
 }
 
 function lowFoodWarning(){
-    if (foodNumber < 7){
+    if (foodNumber < 10){
         notify("Your food is low");
     }
 }
@@ -66,17 +66,12 @@ function notify(notification) {
     var i;
 
     el.innerHTML = "";
-
-    var length;
-    if(array.length < 5) {
-        length = array.length;
-        i = 0;
-    } else {
-        i = 1;
+    console.log(array)
+    if(array[0] != "") {
+        var length = Math.min(array.length, 5);
+        for(i = 1; i < length + 1; i++) {
+            el.innerHTML += array[i-1] + "<br>";
+        }
     }
-    for(; i < length; i++) {
-        el.innerHTML += array[i] + "<br>";
-    }
-
-    el.innerHTML += notification + "<br>";
+    el.innerHTML += notification;
 }
