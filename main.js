@@ -4,11 +4,11 @@ var population =1
 var food = false;
 var wood = false;
 var array = []
-var time = 50;
+var realTime = 50;
 
 window.setInterval(function(){
-//    document.getElementById('time').innerHTML = "Time: " + time(round(++time));
-    document.getElementById('time').innerHTML = "Time: " + round(++time);
+    document.getElementById('time').innerHTML = "Time: " + time(round(++realTime));
+//    document.getElementById('time').innerHTML = "Time: " + round(++time);
     console.log(food);
     console.log(wood);
     woodFunction();
@@ -18,15 +18,13 @@ window.setInterval(function(){
     lowFoodWarning();
 }, 1000)
 
-/*
+
 function time(time) {
 	var minutes = (time / 60);
     minutes = Math.floor(minutes);
     var seconds = time - minutes*60;
-    return ["m ",minutes," s " , seconds];
+    return "m " + minutes +" s " + seconds;
 }
-*/
-
 
 function round(input){
     return Math.round(input * 100) / 100;
@@ -37,6 +35,7 @@ function lowFoodWarning(){
         notify("Your food is low");
     }
 }
+
 function foodFunction(){
     foodNumber -= 0.2*population;
     if (food){
@@ -89,6 +88,6 @@ function notify(notification) {
             }
         }
     }
-    el.innerHTML += (time +" sec: "+ notification);
+    el.innerHTML += (time(round(realTime)) +" sec: "+ notification);
 
 }
