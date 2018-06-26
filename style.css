@@ -23,6 +23,14 @@ div.helloWorld{
     height: 50px;
 }
 
+.grid-container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+    'banner banner banner'
+    'helloWorld1 helloWorld2 helloWorld3' ;
+
+}
 
 div.banner{
     grid-area: banner;
@@ -38,6 +46,13 @@ div.helloWorld1{
     border: solid;
     border-width: 1px;
     padding: 1px;
+    display: grid;
+    grid-template-areas:
+    'upgrade1 upgrade2 upgrade3 upgrade4'
+    'menu menu menu menu'
+    'menu menu menu menu'
+    'menu menu menu menu' ;
+    background-color: #333333;
 }
 
 
@@ -67,13 +82,28 @@ div.helloWorld3{
     padding: 1px;
 }
 
-.grid-container{
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas:
-    'banner banner banner'
-    'helloWorld1 helloWorld2 helloWorld3' ;
+.upgrade1{
+    grid-area: upgrade1;
+    background-color:#383a68;
+}
 
+.upgrade2{
+    grid-area: upgrade2;
+    background-color: #4b4e8e;
+}
+
+.upgrade3{
+    grid-area: upgrade3;
+    background-color: #5f63b7;
+}
+
+.upgrade4{
+    grid-area: upgrade4;
+    background-color: #787eed;
+}
+
+.menu{
+    grid-area: menu;
 }
 
 .food{

@@ -6,17 +6,17 @@ var wood = false;
 var array = []
 var realTime = 50;
 
-window.setInterval(function(){
-    document.getElementById('time').innerHTML = "Time: " + time(round(++realTime));
-//    document.getElementById('time').innerHTML = "Time: " + round(++time);
-    console.log(food);
-    console.log(wood);
-    woodFunction();
-    foodFunction();
-    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
-    document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
-    lowFoodWarning();
-}, 1000)
+//window.setInterval(function(){
+//    document.getElementById('time').innerHTML = "Time: " + time(round(++realTime));
+// //    document.getElementById('time').innerHTML = "Time: " + round(++time);
+//    console.log(food);
+//    console.log(wood);
+//    woodFunction();
+//    foodFunction();
+//    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
+//    document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
+//    lowFoodWarning();
+//}, 1000)
 
 
 function time(time) {
@@ -67,6 +67,10 @@ function woodButton(){
     }
 }
 
+function upgradebutton1(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#383a68";
+}
 /*
  * This function displays notifications with a max of 5.
  */
