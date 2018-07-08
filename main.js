@@ -6,17 +6,17 @@ var wood = false;
 var array = []
 var realTime = 50;
 
-//window.setInterval(function(){
+window.setInterval(function(){
 //    document.getElementById('time').innerHTML = "Time: " + time(round(++realTime));
 // //    document.getElementById('time').innerHTML = "Time: " + round(++time);
-//    console.log(food);
+    console.log(food);
 //    console.log(wood);
 //    woodFunction();
-//    foodFunction();
-//    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
+    foodFunction();
+    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
 //    document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
 //    lowFoodWarning();
-//}, 1000)
+}, 1000)
 
 
 function time(time) {
@@ -58,6 +58,7 @@ function foodButton(){
     }
 }
 
+
 function woodButton(){
     if(wood){
         wood = false;
@@ -70,7 +71,28 @@ function woodButton(){
 function upgradebutton1(){
     var x = document.getElementsByClassName("menu");
     x[0].style.backgroundColor = "#383a68";
+    x[0].innerHTML = "helloWorld1"
 }
+
+function upgradebutton2(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#4b4e8e";
+    x[0].innerHTML = "helloWorld2"
+}
+
+function upgradebutton3(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#5f63b7";
+    x[0].innerHTML = "helloWorld3"
+}
+
+function upgradebutton4(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#787eed";
+    x[0].innerHTML = "helloWorld4"
+}
+
+
 /*
  * This function displays notifications with a max of 5.
  */

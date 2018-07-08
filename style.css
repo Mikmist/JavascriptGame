@@ -38,6 +38,9 @@ div.banner{
     border: solid;
     border-width: 1px;
     padding: 1px;
+    height: 70px;
+    width: 100%;
+    float: left;
 }
 
 div.helloWorld1{
@@ -48,7 +51,7 @@ div.helloWorld1{
     padding: 1px;
     display: grid;
     grid-template-areas:
-    'upgrade1 upgrade2 upgrade3 upgrade4'
+    'botton1 button2 button3 button4'
     'menu menu menu menu'
     'menu menu menu menu'
     'menu menu menu menu' ;
@@ -82,9 +85,46 @@ div.helloWorld3{
     padding: 1px;
 }
 
+.button {
+    background-color: #383a68; /* noGreen */
+    border: 0px solid green;
+    color: white;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+
+}
+.button1{
+    background-color:#383a68;
+    border-color: #242542;
+
+
+}
+
+.button2{
+    background-color: #4b4e8e;
+    border-color: #373b7b;
+
+}
+
+.button3{
+    background-color: #5f63b7;
+    border-color: #373b7b;
+}
+
+.button4{
+    background-color: #787eed;
+    border-color: #1f28e0;
+}
+
 .upgrade1{
     grid-area: upgrade1;
     background-color:#383a68;
+
 }
 
 .upgrade2{
@@ -104,6 +144,7 @@ div.helloWorld3{
 
 .menu{
     grid-area: menu;
+    background-color: #383a68;
 }
 
 .food{
@@ -157,6 +198,7 @@ div.helloWorld3{
 .foodButton{
     grid-area: foodButton;
     background-color: green;
+
 }
 
 .woodButton{
@@ -182,6 +224,19 @@ div.helloWorld3{
 .advancedConstructionMaterialButton{
     grid-area: advancedConstructionMaterialButton;
     background-color: green;
+}
+
+#foodDisplay{
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+/*   position: absolute; */
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+
 }
 
 body{
