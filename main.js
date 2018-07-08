@@ -1,5 +1,9 @@
 var foodNumber =10;
 var woodNumber =0;
+var stoneNumber =0;
+var ironNumber =0;
+var constructionMaterialNumber =0;
+var advancedConstructionMaterialNumber =0;
 var population =1
 var food = false;
 var wood = false;
@@ -13,8 +17,12 @@ window.setInterval(function(){
 //    console.log(wood);
 //    woodFunction();
     foodFunction();
-    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
-//    document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
+    document.getElementById('foodDisplay').innerHTML = round(foodNumber);
+	document.getElementById('woodDisplay').innerHTML = round(woodNumber);
+	document.getElementById('stoneDisplay').innerHTML = round(stoneNumber);
+	document.getElementById('ironDisplay').innerHTML = round(ironNumber);
+	document.getElementById('constructionMaterialDisplay').innerHTML = round(constructionMaterialNumber);
+	document.getElementById('advancedConstructionMaterialDisplay').innerHTML = round(advancedConstructionMaterialNumber);
 //    lowFoodWarning();
 }, 1000)
 
