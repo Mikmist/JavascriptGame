@@ -1,32 +1,39 @@
 var foodNumber =10;
 var woodNumber =0;
+var stoneNumber =0;
+var ironNumber =0;
+var constructionMaterialNumber =0;
+var advancedConstructionMaterialNumber =0;
 var population =1
 var food = false;
 var wood = false;
 var array = []
-var time = 50;
+var realTime = 50;
 
 window.setInterval(function(){
-//    document.getElementById('time').innerHTML = "Time: " + time(round(++time));
-    document.getElementById('time').innerHTML = "Time: " + round(++time);
+//    document.getElementById('time').innerHTML = "Time: " + time(round(++realTime));
+// //    document.getElementById('time').innerHTML = "Time: " + round(++time);
     console.log(food);
-    console.log(wood);
-    woodFunction();
+//    console.log(wood);
+
     foodFunction();
-    document.getElementById('foodDisplay').innerHTML = "Food: " + round(foodNumber);
-    document.getElementById('woodDisplay').innerHTML = "Wood: " + round(woodNumber);
+    woodFunction();
+    document.getElementById('foodDisplay').innerHTML = round(foodNumber);
+	document.getElementById('woodDisplay').innerHTML = round(woodNumber);
+	document.getElementById('stoneDisplay').innerHTML = round(stoneNumber);
+	document.getElementById('ironDisplay').innerHTML = round(ironNumber);
+	document.getElementById('constructionMaterialDisplay').innerHTML = round(constructionMaterialNumber);
+	document.getElementById('advancedConstructionMaterialDisplay').innerHTML = round(advancedConstructionMaterialNumber);
     lowFoodWarning();
 }, 1000)
 
-/*
+
 function time(time) {
 	var minutes = (time / 60);
     minutes = Math.floor(minutes);
     var seconds = time - minutes*60;
-    return ["m ",minutes," s " , seconds];
+    return "m " + minutes +" s " + seconds;
 }
-*/
-
 
 function round(input){
     return Math.round(input * 100) / 100;
@@ -37,6 +44,7 @@ function lowFoodWarning(){
         notify("Your food is low");
     }
 }
+
 function foodFunction(){
     foodNumber -= 0.2*population;
     if (food){
@@ -52,21 +60,47 @@ function woodFunction(){
 
 function foodButton(){
     if(food){
-      food = false;
+//      food = false;
     } else {
       food = true;
         wood = false;
     }
 }
 
+
 function woodButton(){
     if(wood){
-        wood = false;
+//        wood = false;
     } else {
         wood = true;
         food = false;
     }
 }
+
+function upgradebutton1(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#383a68";
+    x[0].innerHTML = "helloWorld1"
+}
+
+function upgradebutton2(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#4b4e8e";
+    x[0].innerHTML = "helloWorld2"
+}
+
+function upgradebutton3(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#5f63b7";
+    x[0].innerHTML = "helloWorld3"
+}
+
+function upgradebutton4(){
+    var x = document.getElementsByClassName("menu");
+    x[0].style.backgroundColor = "#787eed";
+    x[0].innerHTML = "helloWorld4"
+}
+
 
 /*
  * This function displays notifications with a max of 5.
@@ -89,6 +123,6 @@ function notify(notification) {
             }
         }
     }
-    el.innerHTML += (time +" sec: "+ notification);
+    el.innerHTML += (time(round(realTime)) +" sec: "+ notification);
 
 }
