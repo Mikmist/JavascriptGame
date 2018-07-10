@@ -15,15 +15,16 @@ window.setInterval(function(){
 // //    document.getElementById('time').innerHTML = "Time: " + round(++time);
     console.log(food);
 //    console.log(wood);
-//    woodFunction();
+
     foodFunction();
+    woodFunction();
     document.getElementById('foodDisplay').innerHTML = round(foodNumber);
 	document.getElementById('woodDisplay').innerHTML = round(woodNumber);
 	document.getElementById('stoneDisplay').innerHTML = round(stoneNumber);
 	document.getElementById('ironDisplay').innerHTML = round(ironNumber);
 	document.getElementById('constructionMaterialDisplay').innerHTML = round(constructionMaterialNumber);
 	document.getElementById('advancedConstructionMaterialDisplay').innerHTML = round(advancedConstructionMaterialNumber);
-//    lowFoodWarning();
+    lowFoodWarning();
 }, 1000)
 
 
@@ -59,7 +60,7 @@ function woodFunction(){
 
 function foodButton(){
     if(food){
-      food = false;
+//      food = false;
     } else {
       food = true;
         wood = false;
@@ -69,7 +70,7 @@ function foodButton(){
 
 function woodButton(){
     if(wood){
-        wood = false;
+//        wood = false;
     } else {
         wood = true;
         food = false;
