@@ -2,13 +2,18 @@
 
 <html lang="en">
   <head>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="buttons.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
   </head>
   <body>
+    <button class="button" type="button" name="button" onclick="buttonPress()">Eat Macdonnies</button>
+    <p id="calories"> 0 </p>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeTick()" onhover="">Tick Upgrade<p id="tickPrice">Cost: 100</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeCalorie()">Calorie Upgrade<p id="caloriePrice">Cost: 100</p></button>
+    <p id="notification"><p>
+    <div id="myAnimation" class="burgerBanner">
 
-    
-    
+    </div>
 
     <button class="button" type="button" name="button" onclick="buttonPress()">Eat Macdonnies</button>
     <p id="calories"> 0 </p>
@@ -25,9 +30,9 @@
 
     <p id="notification"><p>
     <div id="myAnimation" class="burgerBanner"></div>
-
-
-    
-
   </body>
+  <footer>
+    <script type="text/javascript" src="main.js"></script>
+    <p>Created by: Hattum Smit & Tom den Boon & Inoz Olderhaw</p>
+  </footer>
 </html>
