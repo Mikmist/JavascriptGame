@@ -43,6 +43,7 @@ function round(input){
 function buttonPress () {
   calories += 1;
   updateUI();
+}
 
 function upgradeTick () {
   if (calories >= tickUpgrade) {
@@ -108,7 +109,7 @@ function upgradeBurger() {
 }
 
 function showcost(text, object) {
-  object.style.color = "red";
+//  object.style.color = "red";
 }
 
 function message(text) {
@@ -122,24 +123,23 @@ function myMove() {
   var id = setInterval(frame, 10);
   function frame() {
     if (posDirection <= 200) {
-    pos++;
-    elem.style.left = pos + 'px';
-    posDirection++;
-    //console.log("1")
-  } else if (posDirection<=400){
+      pos++;
+      elem.style.left = pos + 'px';
+      posDirection++;
+      //console.log("1")
+    } else if (posDirection<=400){
 
-        pos--;
-        elem.style.left = pos + 'px';
-        posDirection++;
-        //console.log("2")
-      } else {
-        posDirection = 0;
-        pos++;
-        elem.style.left = pos + 'px';
-        //console.log(posDirection)
-      }
-
-
+      pos--;
+      elem.style.left = pos + 'px';
+      posDirection++;
+      //console.log("2")
+    } else {
+      posDirection = 0;
+      pos++;
+      elem.style.left = pos + 'px';
+      //console.log(posDirection)
     }
-  }
 
+
+  }
+}
