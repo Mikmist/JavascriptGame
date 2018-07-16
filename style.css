@@ -31,3 +31,21 @@ body{
   width: 50px;
   bottom: 0;
 }
+
+.nonvisible{
+  visibility: hidden;
+}
+
+.upgrade_button:hover{
+  background-color:  blue;
+  color: white;
+}
+
+.dropdown{
+  display: none;
+  position: absolute;
+}
+
+.upgrade_button:hover .dropdown{
+  display: inline;
+}
