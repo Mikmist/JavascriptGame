@@ -244,3 +244,21 @@ body{
     background-color: gray;
     font-size: 16px;
 }
+
+.nonvisible{
+  visibility: hidden;
+}
+
+.upgrade_button:hover{
+  background-color:  blue;
+  color: white;
+}
+
+.dropdown{
+  display: none;
+  position: absolute;
+}
+
+.upgrade_button:hover .dropdown{
+  display: inline;
+}

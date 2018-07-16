@@ -77,6 +77,7 @@ function woodButton(){
     }
 }
 
+
 function upgradebutton1(){
     var x = document.getElementsByClassName("menu");
     x[0].style.backgroundColor = "#383a68";
@@ -126,3 +127,65 @@ function notify(notification) {
     el.innerHTML += (time(round(realTime)) +" sec: "+ notification);
 
 }
+
+//function of every burgerupgrade
+function upgradeLettuce() {
+
+}
+
+function upgradeTomatoes() {
+
+}
+
+function upgradePickles() {
+
+}
+
+function upgradeCheese() {
+
+}
+
+function upgradeDressing() {
+
+}
+
+function upgradeBurger() {
+
+}
+
+function showcost(text, object) {
+  object.style.color = "red";
+}
+
+function message(text) {
+    document.getElementById('notification').innerHTML = text;
+}
+
+function myMove() {
+  var elem = document.getElementById("myAnimation");
+  var posDirection = 0;
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (posDirection <= 200) {
+    pos++;
+    elem.style.left = pos + 'px';
+    posDirection++;
+    //console.log("1")
+  } else if (posDirection<=400){
+
+        pos--;
+        elem.style.left = pos + 'px';
+        posDirection++;
+        //console.log("2")
+      } else {
+        posDirection = 0;
+        pos++;
+        elem.style.left = pos + 'px';
+        //console.log(posDirection)
+      }
+
+
+    }
+  }
+
