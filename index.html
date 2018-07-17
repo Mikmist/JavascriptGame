@@ -8,13 +8,12 @@
   <body>
 
 
-    <button class="button" type="button" name="button" onclick="buttonPress()">Eat Macdonnies</button>
+    <button class="button" type="button" name="button" onclick="buttonPress()">Eat Macdonnies<p id="Caloriesperclick">1 calories<p></button>
     <p id="calories"> 0 </p>
     <p id="upgradeInfo"></p>
-    
     <div class="gridcontainer">
 
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeLettuce()" onmouseover="showcost('lettuce', this)"><p class="dropdown" id="dropdownlettuce"></p>Add some lettuce<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeLettuce()" onmouseover="showcost('lettuce', this)" onmouseout="showcostClear()"><p class="dropdown" id="dropdownlettuce">tekst</p>Add some lettuce<p id="caloriePrice">Cost: 10</p></button>
     <button class="upgrade_button" type="button" name="button" onclick="upgradeTomatoes()" onmouseover="showcost('tomatoes', this)"><p class="dropdown" id="dropdowntomatoes">tekst</p>Add some tomatoes<p id="caloriePrice">Cost: 10</p></button>
     <button class="upgrade_button" type="button" name="button" onclick="upgradePickles()" onmouseover="showcost('pickles', this)"><p class="dropdown" id="dropdownpickles">tekst</p>Add some pickles<p id="caloriePrice">Cost: 10</p></button>
     <button class="upgrade_button" type="button" name="button" onclick="upgradeCheese()" onmouseover="showcost('cheese', this)"><p class="dropdown" id="dropdowncheese">tekst</p>Add some cheese<p id="caloriePrice">Cost: 10</p></button>
@@ -22,7 +21,7 @@
     <button class="upgrade_button" type="button" name="button" onclick="upgradeBurger()" onmouseover="showcost('burger', this)"><p class="dropdown" id="dropdownburger">tekst</p>Add an extra burger<p id="caloriePrice">Cost: 10</p></button>
 
     </div>
-
+    <p class="tomatoeSlice"></p>
     <p id="notification"><p>
     <div id="myAnimation" class="burgerBanner"></div>
   </body>

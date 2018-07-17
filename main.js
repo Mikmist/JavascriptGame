@@ -3,13 +3,14 @@ var tickUpgrade = 100
 var calorieUpgrade = 100;
 var caloriePerTick = 0.5;
 var tickrate = 1000;
-var messageReel = ["U hungry?", "BURGERRRR", "Meemees"]
-var lettuceCost = 10
+var messageReel = ["U hungry?", "BURGERRRR", "Meemees"];
+var lettuceCost = 10;
 var tomatoesCost
 var picklesCost
 var cheeseCost
 var dressingCost
 var burgerCost
+var pressValue = 1;
 
 
 
@@ -22,7 +23,7 @@ var messages = setInterval(function() {message(messageReel[Math.floor(Math.rando
 
 // I GIVE UP
 function onTick () {
-  calories += caloriePerTick;
+//  calories += caloriePerTick;
   updateUI();
 }
 
@@ -48,7 +49,7 @@ function round(input){
 }
 
 function buttonPress () {
-  calories += 1;
+  calories += pressValue;
   updateUI();
 }
 
@@ -94,9 +95,15 @@ function myMove() {
 function upgradeLettuce() {
   if (calories>=lettuceCost){
     document.getElementById('upgradeInfo').innerHTML = "You have enough monny";
+    calories-= lettuceCost;
+    pressValue += 0.2;
+    document.getElementById('Caloriesperclick').innerHTML = pressValue + " calories";
+
   } else {
     document.getElementById('upgradeInfo').innerHTML = "You do not have enough monny";
   }
+  updateUI();
+
 }
 
 function upgradeTomatoes() {
@@ -121,7 +128,7 @@ function upgradeBurger() {
 
 function showcost(text, object) {
   if (text == "lettuce"){
-    document.getElementById('dropdownlettuce').innerHTML = "cost: " + lettuceCost;
+    document.getElementById('upgradeInfo').innerHTML = "cost: " + lettuceCost;
   } else if (text == "tomatoes") {
     document.getElementById('dropdownlettuce').innerHTML = "cost: " + tomatoesCost;
   } else if (text == "pickles") {
@@ -135,6 +142,10 @@ function showcost(text, object) {
   }
 }
 
+function showcostClear(){
+  document.getElementById('upgradeInfo').innerHTML = "" ;
+
+}
 function message(text) {
     document.getElementById('notification').innerHTML = text;
 }

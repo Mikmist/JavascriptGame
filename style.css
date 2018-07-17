@@ -20,7 +20,7 @@ body{
   background-color: gray;
 }
 .upgrade_button{
-  font-size: 16px;
+  font-size: 14px;
   background-color: white;
   border: solid black 1px;
   text-align: center;
@@ -50,15 +50,38 @@ body{
   display: none;
   position: absolute;
 }
-
+/*
 .upgrade_button:hover .dropdown{
   display: inline;
 }
+*/
 
 .gridcontainer{
   display: grid;
   grid-template-columns: auto auto;
   width: 100px;
+}
+
+.tomatoeSlice{
+  background-image: url("afbeeldingen/tomatoeslice.jpg");
+  position: absolute;
+  top: 130px;
+  left: 330px;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+
+}
+
+#Caloriesperclick{
+  position: 
+
+  font-size: 10px;
+}
+
+#upgradeInfo{
+  position: fixed;
+  top: 55px;
 }
 
 #caloriePrice{
