@@ -1,9 +1,16 @@
-var calories = 58;
+var calories = 6;
 var tickUpgrade = 100
 var calorieUpgrade = 100;
 var caloriePerTick = 0.5;
 var tickrate = 1000;
 var messageReel = ["U hungry?", "BURGERRRR", "Meemees"]
+var lettuceCost = 10
+var tomatoesCost
+var picklesCost
+var cheeseCost
+var dressingCost
+var burgerCost
+
 
 
 onTick();
@@ -25,7 +32,7 @@ function updateUI() {
   for (i in buttons) {
     // Has to check if there are not foreign objects in the array.
     if(typeof buttons[i] == "object") {
-      if (calories >= 60) {
+      if (calories >= 0) {
         buttons[i].style.display = "inline";
       } else {
         buttons[i].style.display = "none";
@@ -85,7 +92,11 @@ function myMove() {
 
 //function of every burgerupgrade
 function upgradeLettuce() {
-
+  if (calories>=lettuceCost){
+    document.getElementById('upgradeInfo').innerHTML = "You have enough monny";
+  } else {
+    document.getElementById('upgradeInfo').innerHTML = "You do not have enough monny";
+  }
 }
 
 function upgradeTomatoes() {
@@ -109,7 +120,19 @@ function upgradeBurger() {
 }
 
 function showcost(text, object) {
-//  object.style.color = "red";
+  if (text == "lettuce"){
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + lettuceCost;
+  } else if (text == "tomatoes") {
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + tomatoesCost;
+  } else if (text == "pickles") {
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + picklesCost;
+  } else if (text == "cheese") {
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + cheeseCost;
+  } else if (text == "dressing") {
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + dressingCost;
+  } else if (text == "burger") {
+    document.getElementById('dropdownlettuce').innerHTML = "cost: " + burgerCost;
+  }
 }
 
 function message(text) {

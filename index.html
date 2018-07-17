@@ -10,15 +10,13 @@
 
     <button class="button" type="button" name="button" onclick="buttonPress()">Eat Macdonnies</button>
     <p id="calories"> 0 </p>
-    <button class="upgrade_button nonvisible" type="button" name="button" onclick="upgradeTick()">Tick Upgrade<p id="tickPrice">Cost: 100</p></button>
-    <button class="upgrade_button nonvisible" type="button" name="button" onclick="upgradeCalorie()">Calorie Upgrade<p id="caloriePrice">Cost: 100</p></button>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeLettuce()" onmouseover="showcost('lettuce', this)"><p class="dropdown">tekst</p>Add some lettuce<p id="caloriePrice">Cost: 10</p></button>
-    <p id=showcost></p>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeTomatoes()" onmouseover="showcost('tomatoes', this)">Add some tomatoes<p id="caloriePrice">Cost: 10</p></button>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradePickles()" onmouseover="showcost('pickles', this)">Add some pickles<p id="caloriePrice">Cost: 10</p></button>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeCheese()" onmouseover="showcost('cheese', this)">Add some cheese<p id="caloriePrice">Cost: 10</p></button>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeDressing()" onmouseover="showcost('dressing', this)">Add some dressing<p id="caloriePrice">Cost: 10</p></button>
-    <button class="upgrade_button" type="button" name="button" onclick="upgradeBurger()" onmouseover="showcost('burger', this)">Add an extra burger<p id="caloriePrice">Cost: 10</p></button>
+    <p id="upgradeInfo"></p>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeLettuce()" onmouseover="showcost('lettuce', this)"><p class="dropdown" id="dropdownlettuce"></p><br>Add some lettuce<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeTomatoes()" onmouseover="showcost('tomatoes', this)"><p class="dropdown" id="dropdowntomatoes">tekst</p>Add some tomatoes<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradePickles()" onmouseover="showcost('pickles', this)"><p class="dropdown" id="dropdownpickles">tekst</p>Add some pickles<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeCheese()" onmouseover="showcost('cheese', this)"><p class="dropdown" id="dropdowncheese">tekst</p>Add some cheese<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeDressing()" onmouseover="showcost('dressing', this)"><p class="dropdown" id="dropdowndressing">tekst</p>Add some dressing<p id="caloriePrice">Cost: 10</p></button>
+    <button class="upgrade_button" type="button" name="button" onclick="upgradeBurger()" onmouseover="showcost('burger', this)"><p class="dropdown" id="dropdownburger">tekst</p>Add an extra burger<p id="caloriePrice">Cost: 10</p></button>
 
 
     <p id="notification"><p>

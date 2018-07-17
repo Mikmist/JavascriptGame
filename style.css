@@ -25,7 +25,7 @@ body{
 }
 
 .burgerBanner{
-  position:absolute;
+  position: absolute;
   background-image: url("afbeeldingen/burger.png");
   height: 50px;
   width: 50px;
@@ -48,4 +48,8 @@ body{
 
 .upgrade_button:hover .dropdown{
   display: inline;
+}
+
+#caloriePrice{
+  visibility: hidden;
 }
