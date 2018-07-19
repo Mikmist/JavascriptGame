@@ -97,6 +97,7 @@ function upgradeLettuce() {
     document.getElementById('upgradeInfo').innerHTML = "You have enough monny";
     calories-= lettuceCost;
     pressValue += 0.2;
+    pressValue = round(pressValue);
     document.getElementById('Caloriesperclick').innerHTML = pressValue + " calories";
 
   } else {
@@ -127,6 +128,7 @@ function upgradeBurger() {
 }
 
 function showcost(text, object) {
+  console.log(object);
   if (text == "lettuce"){
     document.getElementById('upgradeInfo').innerHTML = "cost: " + lettuceCost;
   } else if (text == "tomatoes") {
@@ -140,6 +142,14 @@ function showcost(text, object) {
   } else if (text == "burger") {
     document.getElementById('dropdownlettuce').innerHTML = "cost: " + burgerCost;
   }
+}
+
+function showtext(text, object){
+  object.innerHTML = text + " " + pressValue;
+}
+
+function showcpcClear(object) {
+  object.innerHTML = "cpc: " + pressValue + "!";
 }
 
 function showcostClear(){

@@ -10,10 +10,13 @@ body{
 }
 
 .button{
-  font-size: 40px;
+  font-size: 20px;
   background-color: white;
   border: solid black 1px;
-
+  height: 50px;
+  margin-bottom: -10px;
+  padding-top: 10px;
+  padding-bottom: -10px;
 }
 
 .button:hover{
@@ -74,9 +77,10 @@ body{
 }
 
 #Caloriesperclick{
-  position: 
-
+  position: relative;
+  text-align: center;
   font-size: 10px;
+  margin-top: 0px;
 }
 
 #upgradeInfo{
