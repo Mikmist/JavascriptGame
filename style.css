@@ -23,11 +23,12 @@ body{
   background-color: gray;
 }
 .upgrade_button{
+  visibility: visible;
   font-size: 14px;
   background-color: white;
   border: solid black 1px;
   text-align: center;
-  padding-top: 0px;
+  padding-top: 7px;
   height: 50px;
   width: 100px;
 }
@@ -50,6 +51,7 @@ body{
 }
 
 .dropdown{
+  visibility: hidden;
   display: none;
   position: absolute;
 }
@@ -63,6 +65,7 @@ body{
   display: grid;
   grid-template-columns: auto auto;
   width: 100px;
+  padding: 5px;
 }
 
 .tomatoeSlice{
